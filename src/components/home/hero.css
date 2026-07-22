@@ -1,0 +1,118 @@
+.hero {
+    position: relative;
+    width: 100%;
+    height: 580px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero__image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg,
+            rgba(0, 0, 0, 0.55) 0%,
+            rgba(0, 0, 0, 0.35) 45%,
+            rgba(0, 0, 0, 0.6) 100%);
+}
+
+.hero__content {
+    position: relative;
+    z-index: 2;
+    max-width: 640px;
+    padding: 0 48px;
+    color: #ffffff;
+}
+
+.hero__content h1 {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 2.75rem;
+    line-height: 1.15;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+}
+
+.hero__content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 480px;
+    margin-bottom: 28px;
+}
+
+.hero__cta {
+    display: flex;
+    gap: 14px;
+}
+
+.hero__btn {
+    padding: 12px 26px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.hero__btn--primary {
+    background: var(--color-accent);
+    color: #ffffff;
+}
+
+.hero__btn--primary:hover {
+    background: var(--color-accent-dark);
+}
+
+.hero__btn--secondary {
+    background: #ffffff;
+    color: var(--color-dark);
+}
+
+.hero__btn--secondary:hover {
+    background: #eeeeee;
+}
+
+.hero__stats {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    gap: 64px;
+    padding: 32px 48px 0;
+}
+
+.hero__stat {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero__stat-value {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #ffffff;
+}
+
+.hero__stat-label {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+@media (max-width: 640px) {
+    .hero__content h1 {
+        font-size: 1.9rem;
+    }
+
+    .hero__stats {
+        gap: 32px;
+        padding: 24px 24px 0;
+    }
+}
