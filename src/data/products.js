@@ -128,8 +128,8 @@ export const featuredProducts = [
     reviewCount: 10,
     price: 265.0,
     originalPrice: 310.0,
-    image:
-      'https://images.unsplash.com/photo-1600065190067-e33b39d5b6ec?auto=format&fit=crop&w=500&q=80',
+  image:
+  'https://images.unsplash.com/photo-1573871665247-2b556aa23460?auto=format&fit=crop&w=500&q=80',
   },
   {
     id: 'flute',
@@ -140,7 +140,7 @@ export const featuredProducts = [
     reviewCount: 12,
     price: 210.0,
     originalPrice: 245.0,
-    image:
-      'https://images.unsplash.com/photo-1600065190067-e33b39d5b6ec?auto=format&fit=crop&w=500&q=80',
-  },
+image:
+  'https://images.unsplash.com/photo-1516275992531-b5e19d647811?auto=format&fit=crop&w=500&q=80',}
+
 ]
