@@ -54,14 +54,33 @@
     color: var(--color-text-muted);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 640px) {
+    .category-grid {
+        padding: 48px 20px;
+    }
 
-    .category-tile,
-    .category-tile img {
-        width: 130px;
+    .category-grid__row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .category-tile {
+        width: calc(33.333% - 8px);
     }
 
     .category-tile img {
-        height: 130px;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+
+    .category-tile__name {
+        font-size: 0.75rem;
+    }
+
+    .category-tile__count {
+        font-size: 0.68rem;
     }
 }

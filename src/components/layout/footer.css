@@ -125,3 +125,35 @@
         font-size: 3rem;
     }
 }
+@media (max-width: 640px) {
+    .site-footer {
+        padding: 40px 20px 0;
+    }
+
+    .site-footer__columns {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .site-footer__column h4 {
+        font-size: 0.8rem;
+        margin-bottom: 10px;
+    }
+
+    .site-footer__column ul li {
+        margin-bottom: 6px;
+    }
+
+    .site-footer__column ul li a {
+        font-size: 0.75rem;
+    }
+
+    .site-footer__brand p {
+        font-size: 0.78rem;
+    }
+
+    .site-footer__bottom p {
+        font-size: 0.7rem;
+    }
+}

@@ -34,14 +34,51 @@
     gap: 24px;
 }
 
+/* Mobile category-grouped layout is hidden by default (desktop/tablet) */
+.featured-products__mobile-categories {
+    display: none;
+}
+
 @media (max-width: 900px) {
     .featured-products__grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 640px) {
+    .featured-products {
+        padding: 16px 20px 48px;
+    }
+
+    /* Hide the desktop grid, show the categorized scroll layout instead */
     .featured-products__grid {
-        grid-template-columns: 1fr;
+        display: none;
+    }
+
+    .featured-products__mobile-categories {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+    }
+
+    .featured-products__category h3 {
+        font-family: var(--font-heading);
+        font-weight: 600;
+        font-size: 1rem;
+        margin-bottom: 12px;
+    }
+
+    .featured-products__scroll-row {
+        display: flex;
+        gap: 14px;
+        overflow-x: auto;
+        padding-bottom: 8px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .featured-products__scroll-item {
+        flex: 0 0 150px;
+        scroll-snap-align: start;
     }
 }
