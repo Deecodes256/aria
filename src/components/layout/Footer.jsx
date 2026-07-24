@@ -38,7 +38,7 @@ export default function Footer() {
             accessories. Making music accessible to everyone since 2025.
           </p>
           <div className="site-footer__social">
-            {SOCIAL_LINKS.map(({ label, icon: Icon, href }) => (/*loops through the social media links array above to avoid repeating html */
+            {SOCIAL_LINKS.map(({ label, icon: Icon, href }) => (
               <a key={label} href={href} aria-label={label}>
                 <Icon size={16} />
               </a>
@@ -51,7 +51,7 @@ export default function Footer() {
             <div key={column.heading} className="site-footer__column">
               <h4>{column.heading}</h4>
               <ul>
-                /**loops through the column array above to avoid repeating html */
+           
                 {column.links.map((link) => (
                   <li key={link}>
                     <a href="#">{link}</a>

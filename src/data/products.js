@@ -80,8 +80,8 @@ export const featuredProducts = [
     reviewCount: 7,
     price: 68.0,
     originalPrice: 85.0,
-    image:
-      'https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?auto=format&fit=crop&w=500&q=80',
+image:
+  'https://images.unsplash.com/photo-1585545335894-05922f25129d?auto=format&fit=crop&w=500&q=80',
   },
   {
     id: 'snare-drum',
@@ -92,8 +92,8 @@ export const featuredProducts = [
     reviewCount: 15,
     price: 145.0,
     originalPrice: 175.0,
-    image:
-      'https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?auto=format&fit=crop&w=500&q=80',
+image:
+  'https://images.unsplash.com/photo-1571327073757-71d13c24de30?auto=format&fit=crop&w=500&q=80',
   },
   {
     id: 'alto-saxophone',
