@@ -15,16 +15,21 @@ export function CartProvider({ children }) {
             ? { ...item, quantity: item.quantity + 1 }
             : item
         )
-      }/*when a user clicks add to cart button, the .find checks if the item already exists,if not it adds to the cart and if it exists it increases the quantity of that item by 1*/
+      }
 
       return [...currentItems, { ...product, quantity: 1 }]
     })
   }
 
+  function removeFromCart(productId) {
+    setItems((currentItems) => currentItems.filter((item) => item.id !== productId))
+  }
+
   const cartCount = items.reduce((total, item) => total + item.quantity, 0)
-/*this helps tojust connect components in different files so that way the length of the cart array can be rendered on the cart icon */
+  const cartTotal = items.reduce((total, item) => total + item.price * item.quantity, 0)
+
   return (
-    <CartContext.Provider value={{ items, addToCart, cartCount }}>
+    <CartContext.Provider value={{ items, addToCart, removeFromCart, cartCount, cartTotal }}>
       {children}
     </CartContext.Provider>
   )
