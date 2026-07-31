@@ -1,12 +1,23 @@
-import { Star, ShoppingCart } from 'lucide-react'
+import { useState } from 'react'
+import { Star, ShoppingCart, Check } from 'lucide-react'
 import { useCart } from '../../context/CartContext.jsx'
 import './product-card.css'
 
-export default function ProductCard({ product }) {/*destructuring object property names into a variable */
+export default function ProductCard({ product }) {
   const { brand, name, rating, reviewCount, price, originalPrice, image } = product
   const { addToCart } = useCart()
+  const [justAdded, setJustAdded] = useState(false)
 
-  return (/*After looping through the array,this renders all the different  objects (product cards) */
+  function handleAddToCart() {
+    addToCart(product)
+    setJustAdded(true)
+
+    setTimeout(() => {
+      setJustAdded(false)
+    }, 4000)
+  }
+
+  return (
     <div className="product-card">
       <img className="product-card__image" src={image} alt={name} />
 
@@ -28,9 +39,9 @@ export default function ProductCard({ product }) {/*destructuring object propert
         )}
       </div>
 
-      <button className="product-card__add-btn" onClick={() => addToCart(product)}>
-        <ShoppingCart size={15} />
-        Add to Cart
+      <button className="product-card__add-btn" onClick={handleAddToCart}>
+        {justAdded ? <Check size={15} /> : <ShoppingCart size={15} />}
+        {justAdded ? 'Added to Cart' : 'Add to Cart'}
       </button>
     </div>
   )
