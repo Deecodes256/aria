@@ -90,7 +90,7 @@
 }
 
 .hero__stat {
-    display: flex;
+    display: grid;
     flex-direction: column;
 }
 
@@ -117,7 +117,7 @@
     }
 
     .hero__stats {
-        gap: 32px;
+        gap: 34px;
         padding: 24px 24px 0;
     }
 }
